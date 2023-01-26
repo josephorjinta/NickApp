@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="NickApp.Pages.IncidentPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     xmlns:datagrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+    x:Name="incidentPage"  
+    Shell.TabBarIsVisible="True"  >
+    
+    
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+           
+            <Label VerticalOptions="Center"  FontAttributes="Bold"  Text="Incidents" TextColor="GhostWhite" FontSize="18" />
+
+        </StackLayout>
+    </Shell.TitleView>
+    <ContentPage.ToolbarItems  >
+
+       
+        <ToolbarItem IconImageSource="poweroff.png"   Text="Exit App"  Clicked="tiSignOut_Clicked"   Priority="3" Order="Secondary" />
+
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content >
+  
+            
+
+                        <Grid >
+                            <ScrollView x:Name="sv5" HorizontalOptions="FillAndExpand" IsClippedToBounds="True"  CompressedLayout.IsHeadless="False">
+
+                                <ScrollView.VerticalOptions>
+                                    <OnIdiom
+                        x:TypeArguments="LayoutOptions"
+                        Default="CenterAndExpand"
+                        Phone="FillAndExpand" />
+                                </ScrollView.VerticalOptions>
+                <Grid>
+                    <StackLayout Orientation="Vertical" Margin="3,3,3,3">
+
+
+                        <StackLayout Orientation="Vertical" Padding="8">
+                            <Label Text="Provide Incident that you wish to report" TextTransform="Uppercase" CharacterSpacing="2" FontSize="13"  FontFamily="Montserrat-Bold"  TextColor="#286D7A"  HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"/>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                                <Entry Placeholder="Name of Incident" PlaceholderColor="Olive" Text="{Binding IncidentName}"  WidthRequest="200" />
+
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                                <Entry Placeholder="Location of Incident" PlaceholderColor="Olive" Text="{Binding IncidentLocation}" WidthRequest="200" />
+
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                                <Entry Placeholder="Recorded by " PlaceholderColor="Olive" Text="{Binding IncidentRecordBy}"  WidthRequest="200" />
+
+                            </StackLayout>
+
+
+
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"  Margin="0,3,0,3">
+                                <Button  Command="{Binding CancelCommand}"  BackgroundColor="Blue" HorizontalOptions="FillAndExpand"   TextColor="GhostWhite"  Text="Cancel" FontAttributes="Bold" HeightRequest="50"  FontSize="18"  CornerRadius="3"   />
+                                <Button   Command="{Binding AddIncidentCommand}"  BackgroundColor="Blue"  HorizontalOptions="FillAndExpand"   TextColor="GhostWhite"  Text="{Binding AddIncidentText}" FontAttributes="Bold" HeightRequest="50"  FontSize="18"  CornerRadius="3"   />
+                            </StackLayout>
+
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"  Margin="0,3,0,3">
+                                <Button  Command="{Binding SyncCommand}"  BackgroundColor="Blue" HorizontalOptions="FillAndExpand"   TextColor="GhostWhite"  Text="Sync Data" FontAttributes="Bold" HeightRequest="50"  FontSize="18"  CornerRadius="3"   />
+
+                            </StackLayout>
+
+                            <StackLayout  Padding="8" >
+                                <datagrid:SfDataGrid x:Name="dataIncidentGrid" MinimumHeightRequest="50" HeightRequest="50"   ItemsSource="{Binding Incidents}" WidthRequest="700" SelectionChanged="dataIncidentGrid_SelectionChanged"  QueryRowHeight="dataIncidentGrid_QueryRowHeight"
+            AutoGenerateColumns="False"   SelectionMode="Single"   ColumnSizer="Star">
+                                    <datagrid:SfDataGrid.Columns >
+
+                                        <datagrid:GridTextColumn MappingName="IncidentName"  LineBreakMode="WordWrap" Width="120" Padding="4, 0, 0, 0" CellTextSize="15" HeaderTextAlignment="Start"  AllowEditing="False"  TextAlignment="Start" HeaderText="Incident" HeaderCellTextSize="15"  HeaderFont="Montserrat-Bold"  />
+                                        <datagrid:GridTextColumn MappingName="IncidentLocation" Format="n2"  LineBreakMode="WordWrap"  Width="120" Padding="4, 0, 0, 0" CellTextSize="15" HeaderTextAlignment="Start"  AllowEditing="False"  TextAlignment="Start" HeaderText="Location" HeaderCellTextSize="15"  HeaderFont="Montserrat-Bold"  />
+                                        <datagrid:GridTextColumn MappingName="IncidentRecordBy" Format="n2"  LineBreakMode="WordWrap"  Width="120" Padding="4, 0, 0, 0" CellTextSize="15" HeaderTextAlignment="Start"  AllowEditing="False"  TextAlignment="Start" HeaderText="Recorded By" HeaderCellTextSize="15"  HeaderFont="Montserrat-Bold"  />
+
+                                    </datagrid:SfDataGrid.Columns>
+                                </datagrid:SfDataGrid>
+
+                            </StackLayout>
+
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+                        </Grid>
+                  
+           
+      
+
+    </ContentPage.Content>
+
+
+</ContentPage>
