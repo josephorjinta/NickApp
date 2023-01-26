@@ -13,6 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NickApp", "NickApp\NickApp.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NickWebApi", "NickWebApi\NickWebApi.csproj", "{5F0AC112-476B-402B-9B67-3352A8802CDD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4E002E5A-18BE-4D39-8D03-44AF34FBD212}"
+	ProjectSection(SolutionItems) = preProject
+		NICKDB.sql = NICKDB.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
