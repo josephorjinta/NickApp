@@ -59,7 +59,7 @@
 
 
                             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"  Margin="0,3,0,3">
-                                <Button  Command="{Binding CancelCommand}"  BackgroundColor="Blue" HorizontalOptions="FillAndExpand"   TextColor="GhostWhite"  Text="Cancel" FontAttributes="Bold" HeightRequest="50"  FontSize="18"  CornerRadius="3"   />
+                                <Button  Command="{Binding CancelCommand}"  BackgroundColor="Blue" HorizontalOptions="FillAndExpand"   TextColor="GhostWhite"  Text="Ok" FontAttributes="Bold" HeightRequest="50"  FontSize="18"  CornerRadius="3"   />
                                 <Button   Command="{Binding AddIncidentCommand}"  BackgroundColor="Blue"  HorizontalOptions="FillAndExpand"   TextColor="GhostWhite"  Text="{Binding AddIncidentText}" FontAttributes="Bold" HeightRequest="50"  FontSize="18"  CornerRadius="3"   />
                             </StackLayout>
 
@@ -70,8 +70,8 @@
                             </StackLayout>
 
                             <StackLayout  Padding="8" >
-                                <datagrid:SfDataGrid x:Name="dataIncidentGrid" MinimumHeightRequest="50" HeightRequest="50"   ItemsSource="{Binding Incidents}" WidthRequest="700" SelectionChanged="dataIncidentGrid_SelectionChanged"  QueryRowHeight="dataIncidentGrid_QueryRowHeight"
-            AutoGenerateColumns="False"   SelectionMode="Single"   ColumnSizer="Star">
+                                <datagrid:SfDataGrid x:Name="dataIncidentGrid" MinimumHeightRequest="50" HeightRequest="50"   ItemsSource="{Binding Incidents}" SelectionChanged="dataIncidentGrid_SelectionChanged"  QueryRowHeight="dataIncidentGrid_QueryRowHeight"
+            AutoGenerateColumns="False"   SelectionMode="Single"   ColumnSizer="Star" WidthRequest="1000">
                                     <datagrid:SfDataGrid.Columns >
 
                                         <datagrid:GridTextColumn MappingName="IncidentName"  LineBreakMode="WordWrap" Width="120" Padding="4, 0, 0, 0" CellTextSize="15" HeaderTextAlignment="Start"  AllowEditing="False"  TextAlignment="Start" HeaderText="Incident" HeaderCellTextSize="15"  HeaderFont="Montserrat-Bold"  />

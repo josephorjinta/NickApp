@@ -92,21 +92,21 @@ namespace NickApp.ViewModels
             {
                 if (this.UserName == "")
                 {
-                    await Application.Current.MainPage.DisplayAlert("Please provide User Name", "NickApp", "Cancel");
+                    await Application.Current.MainPage.DisplayAlert("Please provide User Name", "NickApp", "Ok");
 
                 //    await UserDialogs.Instance.AlertAsync("Please provide User Name", "Sign Up");
                     return;
                 }
                 if (this.FirstName == "")
                 {
-                    await Application.Current.MainPage.DisplayAlert("Please provide First Name", "NickApp", "Cancel");
+                    await Application.Current.MainPage.DisplayAlert("Please provide First Name", "NickApp", "Ok");
 
                   //  await UserDialogs.Instance.AlertAsync("Please provide First Name", "Sign Up");
                     return;
                 }
                 if (this.LastName == "")
                 {
-                    await Application.Current.MainPage.DisplayAlert("Please provide Last Name", "NickApp", "Cancel");
+                    await Application.Current.MainPage.DisplayAlert("Please provide Last Name", "NickApp", "Ok");
 
                    // await UserDialogs.Instance.AlertAsync("Please provide Last Name", "Sign Up");
                     return;
@@ -114,7 +114,7 @@ namespace NickApp.ViewModels
 
                     if (this.PhoneNumber == "")
                     {
-                    await Application.Current.MainPage.DisplayAlert("Please provide Phone No", "NickApp", "Cancel");
+                    await Application.Current.MainPage.DisplayAlert("Please provide Phone No", "NickApp", "Ok");
 
                   ///  await UserDialogs.Instance.AlertAsync("Please provide Phone No ", "Sign Up");
                         return;
@@ -124,7 +124,7 @@ namespace NickApp.ViewModels
                     if (li.Count() > 0)
                     {
                        // await UserDialogs.Instance.AlertAsync("Sign Up Failed, User Name is already used to sign up. Use Another ", "Sign Up");
-                         await Application.Current.MainPage.DisplayAlert("Sign Up Failed, User Name is already used to sign up. Use Another", "NickApp", "Cancel");
+                         await Application.Current.MainPage.DisplayAlert("Sign Up Failed, User Name is already used to sign up. Use Another", "NickApp", "Ok");
 
                       return;
 
@@ -134,13 +134,13 @@ namespace NickApp.ViewModels
                     {
                        // UserDialogs.Instance.Alert("Please provide New Password", "Sign Up");
 
-                    await Application.Current.MainPage.DisplayAlert("Please provide New Password", "NickApp", "Cancel");
+                    await Application.Current.MainPage.DisplayAlert("Please provide New Password", "NickApp", "Ok");
 
                     return;
                     }
                     if (Password2 == "")
                     {
-                    await Application.Current.MainPage.DisplayAlert("Please Confirm  Password", "NickApp", "Cancel");
+                    await Application.Current.MainPage.DisplayAlert("Please Confirm  Password", "NickApp", "Ok");
 
                    // UserDialogs.Instance.Alert("Please Confirm Password", "Sign Up");
                         return;
@@ -149,7 +149,7 @@ namespace NickApp.ViewModels
                     {
                       //  await UserDialogs.Instance.AlertAsync("There is Password Mismatch, Please provide matching Password and Confirm Password values ", "Sign Up");
 
-                    await Application.Current.MainPage.DisplayAlert("There is Password Mismatch, Please provide matching Password and Confirm Password values ", "NickApp", "Cancel");
+                    await Application.Current.MainPage.DisplayAlert("There is Password Mismatch, Please provide matching Password and Confirm Password values ", "NickApp", "Ok");
                     return;
                     }
 
@@ -194,7 +194,7 @@ namespace NickApp.ViewModels
 
                       ///  await UserDialogs.Instance.AlertAsync(FirstName + ", You have successfully Signed Up. Please Sign In.");
 
-                await Application.Current.MainPage.DisplayAlert(FirstName + ", You have successfully Signed Up. Please Sign In.", "NickApp", "Cancel");
+                await Application.Current.MainPage.DisplayAlert(FirstName + ", You have successfully Signed Up. Please Sign In.", "NickApp", "Ok");
 
 
                 await Shell.Current.GoToAsync("..");
@@ -205,7 +205,7 @@ namespace NickApp.ViewModels
             catch (Exception ex)
             {
               //  await UserDialogs.Instance.AlertAsync(FirstName + ", No Internet Connection for Sign Up. Try Again.");
-                await Application.Current.MainPage.DisplayAlert("No Internet Connection for Sign Up. Try Again.", "NickApp", "Cancel");
+                await Application.Current.MainPage.DisplayAlert("No Internet Connection for Sign Up. Try Again.", "NickApp", "Ok");
 
                 string exs = ex.Message;
             }

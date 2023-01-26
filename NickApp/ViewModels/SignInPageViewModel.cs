@@ -190,14 +190,14 @@ namespace NickApp.ViewModels
             {
                // UserDialogs.Instance.Alert("Please provide User Name");
 
-                await Application.Current.MainPage.DisplayAlert("Please provide User Name", "NickApp", "Cancel");
+                await Application.Current.MainPage.DisplayAlert("Please provide User Name", "NickApp", "Ok");
 
                 return;
             }
             if (Password == null)
             {
               //  UserDialogs.Instance.Alert("Please provide Password");
-                await Application.Current.MainPage.DisplayAlert("Please provide Password", "NickApp", "Cancel");
+                await Application.Current.MainPage.DisplayAlert("Please provide Password", "NickApp", "Ok");
 
                 return;
             }
@@ -218,7 +218,7 @@ namespace NickApp.ViewModels
                 {
                    // UserDialogs.Instance.Alert("Sign in failed. Check your Sign in Credentials.");
 
-                   await  Application.Current.MainPage.DisplayAlert("Sign in failed. Check your Sign in Credentials.","NickApp","Cancel");
+                   await  Application.Current.MainPage.DisplayAlert("Sign in failed. Check your Sign in Credentials.","NickApp","Ok");
 
                   
                 }

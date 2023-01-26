@@ -47,7 +47,7 @@ namespace NickApp.Pages
             else
             {
                 //UserDialogs.Instance.Alert("Internet Connection is not available.", "Information", "OK");
-                Application.Current.MainPage.DisplayAlert("Internet Connection is not available.", "NickApp", "Cancel");
+                Application.Current.MainPage.DisplayAlert("Internet Connection is not available.", "NickApp", "Ok");
 
             }
 

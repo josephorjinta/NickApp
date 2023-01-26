@@ -84,13 +84,13 @@ namespace NickApp.ViewModels
                 {
                     //await UserDialogs.Instance.AlertAsync("Please Provide Incident Name", "Nick Incidents");
 
-                    await Application.Current.MainPage.DisplayAlert("Please Provide Incident Name.", "NickApp", "Cancel");
+                    await Application.Current.MainPage.DisplayAlert("Please Provide Incident Name.", "NickApp", "Ok");
 
                     return;
                 }
                 if (IncidentLocation == null)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Please Provide Incident Location.", "NickApp", "Cancel");
+                    await Application.Current.MainPage.DisplayAlert("Please Provide Incident Location.", "NickApp", "Ok");
 
                     //await UserDialogs.Instance.AlertAsync("Please Provide Incident Location", "Nick Incidents");
                     return;
@@ -99,7 +99,7 @@ namespace NickApp.ViewModels
                 {
                    // await UserDialogs.Instance.AlertAsync("Please Provide who Reported the Incident", "Nick Incidents");
 
-                    await Application.Current.MainPage.DisplayAlert("Please Provide who Reported the Incident", "NickApp", "Cancel");
+                    await Application.Current.MainPage.DisplayAlert("Please Provide who Reported the Incident", "NickApp", "Ok");
                     
                     return;
                 }
